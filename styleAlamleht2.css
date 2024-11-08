@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.päis {
+    width: 100%;
+    background-color: rgba(221, 104, 39, 1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 2s ease;
+    transition: 0.6s;
+    z-index: 10000;
+    height: 130px;
+    margin-top: 20px;
+    padding: 10px 0;
+    box-shadow: 0px 10px 5px #2f2f2f, 0px -10px 5px #2f2f2f;
+}
+
+.alamlehed {
+    font-weight: bold;
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    font-family: pealkiri;
+}
+
+.alamlehed li {
+    padding: 0px 30px;
+}
+
+.alamlehed li a {
+    transition: all 0.4s ease 0s;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.alamlehed li a:hover {
+    color: rgb(127, 48, 48);
+}
+
+.pealkiri {
+    font-family: pealkiri;
+    font-size: 100px;
+    color: white;
+}
+
+.pealkiri-box {
+    text-align: center;
+    padding: 20px;
+}
+
+@font-face {
+    font-family: pealkiri;
+    src: url(Basketball.otf);
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.peabox {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tekst-box {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
