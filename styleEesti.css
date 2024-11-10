@@ -75,6 +75,10 @@ li a {
     font-size: 100px;
 }
 
+.väiksem-pealkiri {
+    font-size: 70px;
+}
+
 .pealkiri-box {
     text-align: center;
 }
