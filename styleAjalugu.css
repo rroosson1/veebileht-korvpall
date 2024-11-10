@@ -13,8 +13,6 @@ html {
     background-color: rgba(221, 104, 39, 1);
     text-align: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
     animation: fade-in 2s ease;
     transition: 0.6s;
     z-index: 10000;
@@ -22,6 +20,15 @@ html {
     margin-top: 20px;
     padding: 10px 0;
     box-shadow: 0px 10px 5px #2f2f2f, 0px -10px 5px #2f2f2f;
+}
+
+.icon-box {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.icon {
+    cursor: pointer;
 }
 
 .alamlehed {
@@ -47,15 +54,28 @@ html {
     color: rgb(127, 48, 48);
 }
 
+.alamlehed-box {
+    text-align: center;
+    margin: auto;
+    float: right;
+}
+
 .pealkiri {
     font-family: pealkiri;
     font-size: 100px;
-    color: white;
+    color: black;
 }
 
 .pealkiri-box {
     text-align: center;
-    padding: 20px;
+}
+
+.nav-1 {
+    border-right: 3px solid black;
+}
+
+.nav-2 {
+    border-right: 3px solid black;
 }
 
 @font-face {
