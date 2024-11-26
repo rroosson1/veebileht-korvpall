@@ -80,7 +80,7 @@ html {
 
 @font-face {
     font-family: pealkiri;
-    src: url(Basketball.otf);
+    src: url(VarsityTeam-Bold.otf);
 }
 
 @keyframes fade-in {
@@ -102,8 +102,23 @@ html {
     padding: 20px;
     margin-top: 20px;
     font-size: 20px;
-    font-family: Arial, sans-serif;
+    font-family: pealkiri;
     background-color: #f4f4f4;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ikoon {
+    margin-top: 50px
+}
+
+.peaminebox {
+    display: flex;
+    flex-direction:row;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.viide {
+    text-decoration: none;
 }
