@@ -71,7 +71,7 @@ li a {
 
 @font-face {
     font-family: pealkiri;
-    src: url(Basketball.otf);
+    src: url(VarsityTeam-Bold.otf);
 }
 
 .pealkiri {
@@ -164,7 +164,7 @@ li a {
     padding: 20px;
     margin-top: 20px;
     font-size: 20px;
-    font-family: Arial, sans-serif;
+    font-family: pealkiri;
     background-color: #f4f4f4;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -208,3 +208,20 @@ td a::after {
 td a:hover::after {
     width: 100%;
   }
+
+
+.tabeli-pealkiri {
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 15px
+}
+
+.tabeli-pealkiri1 {
+    text-align: center;
+}
+
+.mängijad {
+    text-align: center;
+    list-style: none;
+    line-height: 30px;
+}
