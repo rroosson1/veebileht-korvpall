@@ -67,16 +67,12 @@ li a {
 
 @font-face {
     font-family: pealkiri;
-    src: url(Basketball.otf);
+    src: url(VarsityTeam-Bold.otf);
 }
 
 .pealkiri {
     font-family: pealkiri;
     font-size: 100px;
-}
-
-.väiksem-pealkiri {
-    font-size: 70px;
 }
 
 .pealkiri-box {
@@ -164,8 +160,29 @@ li a {
     padding: 20px;
     margin-top: 20px;
     font-size: 20px;
-    font-family: Arial, sans-serif;
+    font-family: pealkiri;
     background-color: #f4f4f4;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.peaminebox {
+    display: flex;
+    flex-direction:row;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.koondise-pilt {
+    margin-top: 70px;
+}
+
+.koondise-nimed {
+    list-style: none;
+    line-height:30px
+}
+
+.tulemused {
+    list-style: none;
 }
