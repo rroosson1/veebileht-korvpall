@@ -165,15 +165,20 @@ li a {
     margin-top: 20px;
     font-size: 20px;
     font-family: pealkiri;
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
+    background-color: rgba(255, 89, 0, 0.78);
+    border: 2px solid black;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.underline {
+    border-bottom: 2px solid black;
+}
+
 table, th, td {
-    border: 2px solid black;
+    border: 4px solid black;
     border-collapse: collapse;
     font-family:pealkiri;
+    background-color: white;
 }
 
 th, td {
@@ -218,6 +223,7 @@ td a:hover::after {
 
 .tabeli-pealkiri1 {
     text-align: center;
+    border-bottom: 2px solid black;
 }
 
 .mängijad {

@@ -55,8 +55,10 @@ html {
 }
 
 .alamlehed-box {
+    position: absolute;
+    right: 50px;
     text-align: center;
-    margin: auto;
+    margin: 50px;
     float: right;
 }
 
@@ -103,9 +105,17 @@ html {
     margin-top: 20px;
     font-size: 20px;
     font-family: pealkiri;
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
+    background-color: rgba(255, 89, 0, 0.78);
+    border: 2px solid black;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tekst {
+    line-height: 30px
+}
+
+.underline {
+    border-bottom: 2px solid black;
 }
 
 .ikoon {

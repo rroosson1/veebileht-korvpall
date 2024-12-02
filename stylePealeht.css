@@ -133,6 +133,10 @@ li a {
     width:80%;
 }
 
+.kiri {
+    line-height: 40px;
+}
+
 .pealkiri-box2 {
     position: absolute;
     text-align: center;
