@@ -1,12 +1,48 @@
 let globalData = {
     "regions": [
         {
-            "Atlantic": ["Boston Celtics", "Brooklyn Nets", "New York Knicks", "Philadelphia 76ers", "Toronto Raptors"],
-            "Central": ["Chicago Bulls", "Cleveland Cavaliers", "Detroit Pistons", "Indiana Pacers", "Milwaukee Bucks"],
-            "Southeast": ["Atlanta Hawks", "Charlotte Hornets", "Miami Heat", "Orlando Magic", "Washington Wizards"],
-            "Northwest": ["Denver Nuggets", "Minnesota Timberwolves", "Oklahoma City Thunder", "Portland Trail Blazers", "Utah Jazz"],
-            "Pacific": ["Golden State Warriors", "LA Clippers", "Los Angeles Lakers", "Phoenix Suns", "Sacramento Kings"],
-            "Southwest": ["Dallas Mavericks", "Houston Rockets", "Memphis Grizzlies", "New Orleans Pelicans", "San Antonio Spurs"]
+            "Atlantic": [
+                { "name": "Boston Celtics", "link": "https://www.nba.com/team/1610612738/celtics" },
+                { "name": "Brooklyn Nets", "link": "https://www.nba.com/team/1610612751/nets" },
+                { "name": "New York Knicks", "link": "https://www.nba.com/team/1610612752/knicks" },
+                { "name": "Philadelphia 76ers", "link": "https://www.nba.com/team/1610612755/sixers" },
+                { "name": "Toronto Raptors", "link": "https://www.nba.com/team/1610612761/raptors" }
+            ],
+            "Central": [
+                { "name": "Chicago Bulls", "link": "https://www.nba.com/team/1610612741/bulls/" },
+                { "name": "Cleveland Cavaliers", "link": "https://www.nba.com/team/1610612739/cavaliers/" },
+                { "name": "Detroit Pistons", "link": "https://www.nba.com/team/1610612765/pistons/" },
+                { "name": "Indiana Pacers", "link": "https://www.nba.com/team/1610612754/pacers/" },
+                { "name": "Milwaukee Bucks", "link": "https://www.nba.com/team/1610612749/bucks/" }
+            ],
+            "Southeast": [
+                { "name": "Atlanta Hawks", "link": "https://www.nba.com/team/1610612737/hawks/" },
+                { "name": "Charlotte Hornets", "link": "https://www.nba.com/team/1610612766/hornets/" },
+                { "name": "Miami Heat", "link": "https://www.nba.com/team/1610612748/heat/" },
+                { "name": "Orlando Magic", "link": "https://www.nba.com/team/1610612753/magic/" },
+                { "name": "Washington Wizards", "link": "https://www.nba.com/team/1610612764/wizards/" }
+            ],
+            "Northwest": [
+                { "name": "Denver Nuggets", "link": "https://www.nba.com/team/1610612743/nuggets/" },
+                { "name": "Minnesota Timberwolves", "link": "https://www.nba.com/team/1610612750/timberwolves/" },
+                { "name": "Oklahoma City Thunder", "link": "https://www.nba.com/team/1610612760/thunder/" },
+                { "name": "Portland Trail Blazers", "link": "https://www.nba.com/team/1610612757/blazers/" },
+                { "name": "Utah Jazz", "link": "https://www.nba.com/team/1610612762/jazz/" }
+            ],
+            "Pacific": [
+                { "name": "Golden State Warriors", "link": "https://www.nba.com/team/1610612744/warriors/" },
+                { "name": "LA Clippers", "link": "https://www.nba.com/team/1610612746/clippers/" },
+                { "name": "Los Angeles Lakers", "link": "https://www.nba.com/team/1610612747/lakers/" },
+                { "name": "Phoenix Suns", "link": "https://www.nba.com/team/1610612756/suns/" },
+                { "name": "Sacramento Kings", "link": "https://www.nba.com/team/1610612758/kings/" }
+            ],
+            "Southwest": [
+                { "name": "Dallas Mavericks", "link": "https://www.nba.com/team/1610612742/mavericks/" },
+                { "name": "Houston Rockets", "link": "https://www.nba.com/team/1610612745/rockets/" },
+                { "name": "Memphis Grizzlies", "link": "https://www.nba.com/team/1610612763/grizzlies/" },
+                { "name": "New Orleans Pelicans", "link": "https://www.nba.com/team/1610612740/pelicans/" },
+                { "name": "San Antonio Spurs", "link": "https://www.nba.com/team/1610612759/spurs/" }
+            ]
         }
     ],
     "parimad_mängijad": [
@@ -27,6 +63,7 @@ let globalData = {
     ]
 };
 
+
 // funktsiooni tiimide kuvamiseks
 function displayTeams() {
 
@@ -41,12 +78,18 @@ function displayTeams() {
     for (let i = 0; i < maxTiimid; i++) {
         const rida = document.createElement("tr");
 
+        // käib tiimid läbi ja loob iga tiimi jaoks lahtri
         regionVõtmed.forEach(region => {
             const cell = document.createElement("td");
-            const tiimiNimi = regions[region][i];
+            const team = regions[region][i];
 
-            if (tiimiNimi) {
-                cell.textContent = tiimiNimi;
+            // kui tiim on olemas, loob lingi
+            if (team) {
+                const link = document.createElement("a");
+                link.href = team.link;
+                link.textContent = team.name;
+                link.target = "_blank";
+                cell.appendChild(link);
             }
             rida.appendChild(cell);
         });
@@ -54,10 +97,12 @@ function displayTeams() {
     }
 }
 
+
 // funktsioon parimate mängijate kuvamiseks
 function displayBestPlayers() {
     const playersList = document.getElementById("mängijad");
 
+    // kasutab globaalset muutujat, mis hoiab andmeid
     const players = globalData.parimad_mängijad[0].mängijad;
 
     players.forEach(player => {
