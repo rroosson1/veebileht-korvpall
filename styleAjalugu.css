@@ -122,3 +122,17 @@ html {
 .viide {
     text-decoration: none;
 }
+.h1-button {
+    all: unset; /* Reset button styles */
+    cursor: pointer;
+    font-size: 2em; /* Match h1 font size */
+    font-weight: bold;
+    text-align: left;
+    display: block; /* Ensure proper spacing */
+    padding: 10px;
+}
+
+.h1-button:hover {
+    color: #cc3030; /* Add a hover effect */
+}
+

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>NBA</title>
+    <script src="./src/script/script.js" defer></script>
     <link rel="stylesheet" href="styleNba.css">
 </head>
 <body>
 <header class="päis">
     <div class="icon-box">
-        <a href="pealeht.html"><img class="icon" src="pildid/basketball.png"></a>
+        <a href="pealeht.html"><img class="icon" src="pildid/basketball.png" alt="korvpall-pilt"></a>
     </div>
     <div class="pealkiri-box">
         <h1 class="pealkiri">NBA</h1>
@@ -27,72 +28,28 @@
         <div class="tabeli-pealkiri">
             <h1>NBA TIIMID</h1>
         </div>
-        <table class="tabel">
-            <tr>
-                <th>ATLANTIC</th>
-                <th>CENTRAL</th>
-                <th>SOUTHEAST</th>
-                <th>NORTHWEST</th>
-                <th>PACIFIC</th>
-                <th>SOUTHWEST</th>
-            </tr>
-            <tr>
-                <td><a href="https://www.nba.com/stats/team/1610612738" target="#">Boston Celtics</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612741" target="#">Chicago Bulls</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612737" target="#">Atlanta Hawks</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612743" target="#">Denver Nuggets</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612744" target="#">Golden State Warriors</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612742" target="#">Dallas Mavericks</a></td>
-            </tr>
-            <tr>
-                <td><a href="https://www.nba.com/stats/team/1610612751" target="#">Brooklyn Nets</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612739" target="#">Cleveland Cavaliers</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612766" target="#">Charlotte Hornets</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612750" target="#">Minnesota Timberwolves</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612746" target="#">LA Clippers</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612745" target="#">Houston Rockets</a></td>
-            </tr>
-            <tr>
-                <td><a href="https://www.nba.com/stats/team/1610612752" target="#">New York Knicks</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612765" target="#">Detroit Pistons</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612748" target="#">Miami Heat</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612760" target="#">Oklahoma City Thunder</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612747" target="#">Los Angeles Lakers</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612763" target="#">Memphis Grizzlies</a></td>
-            </tr>
-            <tr>
-                <td><a href="https://www.nba.com/stats/team/1610612755" target="#">Philadelphia 76ers</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612754" target="#">Indiana Pacers</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612753" target="#">Orlando Magic</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612757" target="#">Portland Trail Blazers</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612756" target="#">Phoenix Suns</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612740" target="#">New Orleans Pelicans</a></td>
-            </tr>
-            <tr>
-                <td><a href="https://www.nba.com/stats/team/1610612761" target="#">Toronto Raptors</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612749" target="#">Milwaukee Bucks</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612764" target="#">Washington Wizards</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612762" target="#">Utah Jazz</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612758" target="#">Sacramento Kings</a></td>
-                <td><a href="https://www.nba.com/stats/team/1610612759" target="#">San Antonio Spurs</a></td>
-            </tr>
+        <table id="teamsTable" class="tabel">
+            <thead>
+                <tr>
+                    <th>ATLANTIC</th>
+                    <th>CENTRAL</th>
+                    <th>SOUTHEAST</th>
+                    <th>NORTHWEST</th>
+                    <th>PACIFIC</th>
+                    <th>SOUTHWEST</th>
+                </tr>
+            </thead>
+            <tbody id="tiimidTabel">
+            </tbody>
         </table>
+        
     </div>
     <div class="tekst-box">
         <h1 class="tabeli-pealkiri1">PARIMAD MÄNGIJAD 2024</h1><br>
-        <ul class="mängijad">
-            <li>Lebron James - Los Angeles Lakers</li>
-            <li>Stephen Curry - Golden State Warriors</li>
-            <li>Victor Wembanyama - San Antonio Spurs</li>
-            <li>Luka Dončić - Dallas Mavericks</li>
-            <li>Kyrie Irving - Dallas Mavericks</li>
-            <li>Nikola Jokić - Denver Nuggets</li>
-            <li>Anthony Edwards - Minnesota Timberwolves</li>
-            <li>Giannis Antetokounmpo - Milwaukee Bucks</li>
-            <li>Jayson Tatum - Boston Celtics</li>
-            <li>Kevin Durant - Phoenix Suns</li>
+        <ul id="mängijad" class="mängijad">
         </ul>
     </div>
+
 </div>
 </body>
 </html>
